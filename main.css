@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg');
+
 .guilds-wrapper{width: 180px;}
 .guilds-wrapper .scroller-wrap{width: 200px;}
 .guilds-wrapper .guilds {
@@ -260,3 +262,76 @@ code.inline
 .message .attachment-image {margin-top: 6px;}
 .message-group:not(.compact) .comment .markup:empty {top:28px;}
 .embed-color-pill ~ .embed {border-radius: 0 4px !important;}
+
+.chat .title-wrap .header-toolbar button{
+	width: 40px;
+	height: 40px;
+}
+
+#friends .friends-header .header-toolbar button span,
+.chat .header-toolbar button span{
+	width: 40px;
+	transition: all 200ms ease-in-out;
+	background-size: 20px 20px;
+}
+
+#friends .friends-header .header-toolbar button:hover span,
+.chat.private .header-toolbar button.private-channel-call-btn:hover span,
+.chat.private .header-toolbar button.private-channel-call-btn.end span,
+.chat .header-toolbar button:hover span,
+.chat .header-toolbar button.active span,
+.chat .header-toolbar button.popout-open span{
+	transform: scale(1.3);
+	opacity: 1;
+}
+
+.chat.private .header-toolbar button.private-channel-call-btn:not(.end) span,
+.chat.private .header-toolbar button.private-channel-call-btn.end{transform: rotate(0deg);}
+
+.chat.private .header-toolbar button.private-channel-call-btn.end span{transform: rotate(135deg)!important;}
+
+.chat .header-toolbar .toolbar-badge{
+	animation: rainbow-count 15s infinite alternate;
+	width: 12px;
+	height: 12px;
+	border: 0;
+	right: 5px;
+}
+
+/* Pinned Messages icon */
+.chat.private .channel-group-dm ~ .header-toolbar button:nth-child(3) span[style],
+.chat.private .header-toolbar button:nth-child(2) span[style],
+.chat:not(.private) .header-toolbar button:nth-child(2) span[style]{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik04OTYgMTA4OHE2NiAwIDEyOC0xNXY2NTVxMCAyNi0xOSA0NXQtNDUgMTloLTEyOHEtMjYgMC00NS0xOXQtMTktNDV2LTY1NXE2MSAxNSAxMjggMTV6bTAtMTA4OHEyMTIgMCAzNjIgMTUwdDE1MCAzNjItMTUwIDM2Mi0zNjIgMTUwLTM2Mi0xNTAtMTUwLTM2MiAxNTAtMzYyIDM2Mi0xNTB6bTAgMjI0cTE0IDAgMjMtOXQ5LTIzLTktMjMtMjMtOXEtMTQ2IDAtMjQ5IDEwM3QtMTAzIDI0OXEwIDE0IDkgMjN0MjMgOSAyMy05IDktMjNxMC0xMTkgODQuNS0yMDMuNXQyMDMuNS04NC41eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==)!important;
+}
+
+/* Notification icon */
+.chat.private .channel-group-dm ~ .header-toolbar button:nth-child(2) span[style],
+.chat:not(.private) .header-toolbar button:nth-child(1) span[style]{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik05MTIgMTY5NnEwLTE2LTE2LTE2LTU5IDAtMTAxLjUtNDIuNXQtNDIuNS0xMDEuNXEwLTE2LTE2LTE2dC0xNiAxNnEwIDczIDUxLjUgMTI0LjV0MTI0LjUgNTEuNXExNiAwIDE2LTE2em04MTYtMjg4cTAgNTItMzggOTB0LTkwIDM4aC00NDhxMCAxMDYtNzUgMTgxdC0xODEgNzUtMTgxLTc1LTc1LTE4MWgtNDQ4cS01MiAwLTkwLTM4dC0zOC05MHE1MC00MiA5MS04OHQ4NS0xMTkuNSA3NC41LTE1OC41IDUwLTIwNiAxOS41LTI2MHEwLTE1MiAxMTctMjgyLjV0MzA3LTE1OC41cS04LTE5LTgtMzkgMC00MCAyOC02OHQ2OC0yOCA2OCAyOCAyOCA2OHEwIDIwLTggMzkgMTkwIDI4IDMwNyAxNTguNXQxMTcgMjgyLjVxMCAxMzkgMTkuNSAyNjB0NTAgMjA2IDc0LjUgMTU4LjUgODUgMTE5LjUgOTEgODh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+)!important;
+	background-position: center!important;
+	background-repeat: no-repeat!important;
+	background-size: 20px 20px!important;
+}
+
+/* Channel Memmber toogle icon */
+.chat.private .channel-group-dm ~ .header-toolbar button:nth-child(4) span[style],
+.chat:not(.private) .header-toolbar button:nth-child(3) span[style]{
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik01MjkgODk2cS0xNjIgNS0yNjUgMTI4aC0xMzRxLTgyIDAtMTM4LTQwLjV0LTU2LTExOC41cTAtMzUzIDEyNC0zNTMgNiAwIDQzLjUgMjF0OTcuNSA0Mi41IDExOSAyMS41cTY3IDAgMTMzLTIzLTUgMzctNSA2NiAwIDEzOSA4MSAyNTZ6bTEwNzEgNjM3cTAgMTIwLTczIDE4OS41dC0xOTQgNjkuNWgtODc0cS0xMjEgMC0xOTQtNjkuNXQtNzMtMTg5LjVxMC01MyAzLjUtMTAzLjV0MTQtMTA5IDI2LjUtMTA4LjUgNDMtOTcuNSA2Mi04MSA4NS41LTUzLjUgMTExLjUtMjBxMTAgMCA0MyAyMS41dDczIDQ4IDEwNyA0OCAxMzUgMjEuNSAxMzUtMjEuNSAxMDctNDggNzMtNDggNDMtMjEuNXE2MSAwIDExMS41IDIwdDg1LjUgNTMuNSA2MiA4MSA0MyA5Ny41IDI2LjUgMTA4LjUgMTQgMTA5IDMuNSAxMDMuNXptLTEwMjQtMTI3N3EwIDEwNi03NSAxODF0LTE4MSA3NS0xODEtNzUtNzUtMTgxIDc1LTE4MSAxODEtNzUgMTgxIDc1IDc1IDE4MXptNzA0IDM4NHEwIDE1OS0xMTIuNSAyNzEuNXQtMjcxLjUgMTEyLjUtMjcxLjUtMTEyLjUtMTEyLjUtMjcxLjUgMTEyLjUtMjcxLjUgMjcxLjUtMTEyLjUgMjcxLjUgMTEyLjUgMTEyLjUgMjcxLjV6bTU3NiAyMjVxMCA3OC01NiAxMTguNXQtMTM4IDQwLjVoLTEzNHEtMTAzLTEyMy0yNjUtMTI4IDgxLTExNyA4MS0yNTYgMC0yOS01LTY2IDY2IDIzIDEzMyAyMyA1OSAwIDExOS0yMS41dDk3LjUtNDIuNSA0My41LTIxcTEyNCAwIDEyNCAzNTN6bS0xMjgtNjA5cTAgMTA2LTc1IDE4MXQtMTgxIDc1LTE4MS03NS03NS0xODEgNzUtMTgxIDE4MS03NSAxODEgNzUgNzUgMTgxeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==)!important;
+}
+
+/* Recent Mention icon */
+div[class*="platform-"] .chat .header-toolbar button:nth-last-child(3) span[style],
+div[class*="platform-"] #friends .header-toolbar button:nth-last-child(3) span[style],
+.chat .header-toolbar button:nth-last-child(2) span[style],
+#friends .header-toolbar button:nth-last-child(2) span[style]{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik03MDQgMzg0cS0xNTMgMC0yODYgNTJ0LTIxMS41IDE0MS03OC41IDE5MXEwIDgyIDUzIDE1OHQxNDkgMTMybDk3IDU2LTM1IDg0cTM0LTIwIDYyLTM5bDQ0LTMxIDUzIDEwcTc4IDE0IDE1MyAxNCAxNTMgMCAyODYtNTJ0MjExLjUtMTQxIDc4LjUtMTkxLTc4LjUtMTkxLTIxMS41LTE0MS0yODYtNTJ6bTAtMTI4cTE5MSAwIDM1My41IDY4LjV0MjU2LjUgMTg2LjUgOTQgMjU3LTk0IDI1Ny0yNTYuNSAxODYuNS0zNTMuNSA2OC41cS04NiAwLTE3Ni0xNi0xMjQgODgtMjc4IDEyOC0zNiA5LTg2IDE2aC0zcS0xMSAwLTIwLjUtOHQtMTEuNS0yMXEtMS0zLTEtNi41dC41LTYuNSAyLTZsMi41LTUgMy41LTUuNSA0LTUgNC41LTUgNC00LjVxNS02IDIzLTI1dDI2LTI5LjUgMjIuNS0yOSAyNS0zOC41IDIwLjUtNDRxLTEyNC03Mi0xOTUtMTc3dC03MS0yMjRxMC0xMzkgOTQtMjU3dDI1Ni41LTE4Ni41IDM1My41LTY4LjV6bTgyMiAxMTY5cTEwIDI0IDIwLjUgNDR0MjUgMzguNSAyMi41IDI5IDI2IDI5LjUgMjMgMjVxMSAxIDQgNC41dDQuNSA1IDQgNSAzLjUgNS41bDIuNSA1IDIgNiAuNSA2LjUtMSA2LjVxLTMgMTQtMTMgMjJ0LTIyIDdxLTUwLTctODYtMTYtMTU0LTQwLTI3OC0xMjgtOTAgMTYtMTc2IDE2LTI3MSAwLTQ3Mi0xMzIgNTggNCA4OCA0IDE2MSAwIDMwOS00NXQyNjQtMTI5cTEyNS05MiAxOTItMjEydDY3LTI1NHEwLTc3LTIzLTE1MiAxMjkgNzEgMjA0IDE3OHQ3NSAyMzBxMCAxMjAtNzEgMjI0LjV0LTE5NSAxNzYuNXoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=)!important;
+}
+
+/* Help icon */
+div[class*="platform-"] .chat .header-toolbar button:nth-last-child(2) span[style],
+div[class*="platform-"] #friends .header-toolbar button:nth-last-child(2) span[style],
+.chat .header-toolbar button:nth-last-child(1) span[style],
+#friends .header-toolbar button:nth-last-child(1) span[style]{
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMDI0IDEzNzZ2LTE5MnEwLTE0LTktMjN0LTIzLTloLTE5MnEtMTQgMC0yMyA5dC05IDIzdjE5MnEwIDE0IDkgMjN0MjMgOWgxOTJxMTQgMCAyMy05dDktMjN6bTI1Ni02NzJxMC04OC01NS41LTE2M3QtMTM4LjUtMTE2LTE3MC00MXEtMjQzIDAtMzcxIDIxMy0xNSAyNCA4IDQybDEzMiAxMDBxNyA2IDE5IDYgMTYgMCAyNS0xMiA1My02OCA4Ni05MiAzNC0yNCA4Ni0yNCA0OCAwIDg1LjUgMjZ0MzcuNSA1OXEwIDM4LTIwIDYxdC02OCA0NXEtNjMgMjgtMTE1LjUgODYuNXQtNTIuNSAxMjUuNXYzNnEwIDE0IDkgMjN0MjMgOWgxOTJxMTQgMCAyMy05dDktMjNxMC0xOSAyMS41LTQ5LjV0NTQuNS00OS41cTMyLTE4IDQ5LTI4LjV0NDYtMzUgNDQuNS00OCAyOC02MC41IDEyLjUtODF6bTM4NCAxOTJxMCAyMDktMTAzIDM4NS41dC0yNzkuNSAyNzkuNS0zODUuNSAxMDMtMzg1LjUtMTAzLTI3OS41LTI3OS41LTEwMy0zODUuNSAxMDMtMzg1LjUgMjc5LjUtMjc5LjUgMzg1LjUtMTAzIDM4NS41IDEwMyAyNzkuNSAyNzkuNSAxMDMgMzg1LjV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+)!important;
+}
