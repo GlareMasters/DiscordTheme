@@ -1,5 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg');
-@import url('https://fonts.googleapis.com/css?family=Dosis|Francois+One|Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Francois+One|Josefin+Slab|Bungee+Shade');
 
 .guilds-wrapper{width: 180px;}
 .guilds-wrapper .scroller-wrap{width: 200px;}
@@ -344,7 +344,6 @@ background: #37cc4a !important; /* colour-names, hex, rgb and rgba all work */
 
 /*   FONTS   */
 
-@import url('https://fonts.googleapis.com/css?family=Dosis|Francois+One|Josefin+Slab');
 .guilds-wrapper {
     width: 180px;
 }
@@ -543,3 +542,9 @@ code.inline {
     font-size: 20px;
 }
 
+.channel-members .member .member-username-inner{
+	font-family: 'Noto', cursive;
+}
+.channel-members h2 {
+	font-family: 'Noto', cursive;
+}
