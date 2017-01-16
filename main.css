@@ -340,3 +340,204 @@ div[class*="platform-"] #friends .header-toolbar button:nth-last-child(2) span[s
 .scroller-wrap .scroller::-webkit-scrollbar-thumb {
 background: #37cc4a !important; /* colour-names, hex, rgb and rgba all work */
 }
+
+/*   FONTS   */
+
+@import url('https://fonts.googleapis.com/css?family=Dosis|Francois+One|Josefin+Slab');
+.guilds-wrapper {
+    width: 180px;
+}
+.guilds-wrapper .scroller-wrap {
+    width: 200px;
+}
+.guilds-wrapper .guilds {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 0;
+    align-content: flex-start;
+}
+.guilds-wrapper .guilds .guild {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+.guilds-wrapper .guilds .guild.unread::before {
+    left: -2px;
+    top: 5px;
+    z-index: 9000;
+}
+.guilds-wrapper .guilds .guild:first-child {
+    position: relative;
+    left: 0;
+    margin: auto;
+    margin-top: 15px;
+}
+#bd-pub-li {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#bd-pub-li #bd-pub-button {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.guilds-wrapper .guilds .guild-separator {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.guilds-wrapper .guilds .friends-online {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+}
+.guilds-wrapper .guilds .guild.selected:before {
+    display: none;
+}
+.guilds-wrapper .guilds .guild {
+    position: relative;
+}
+.guilds-wrapper .guilds .dms {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.guilds-wrapper .guilds .dms .guild {
+    left: 0;
+}
+#voice-connection {
+    background: #111111
+}
+#voice-connection .btn-group {
+    border: 1px solid #181818;
+    background-color: #181818;
+}
+#voice-connection .btn {
+    background: #181818;
+}
+.account .btn {
+    background: #181818;
+}
+.channel-text .active {
+    background: #181818!important;
+}
+.channel-textarea-inner {
+    background: #181818!important;
+    border-color: #00FFFF!important;
+}
+.chat .new-messages-bar {
+    background-color: green;
+}
+.chat .new-messages-bar:hover {
+    background-color: #00ffff;
+}
+.chat .new-messages-bar button {
+    color: #000000;
+}
+.chat .new-messages-bar button:last-child {
+    color: #000000;
+}
+.chat .new-messages-bar button:hover {
+    color: #ffffff;
+}
+.message-group .comment .markup pre {
+    border-color: #ff0000 !important;
+}
+code.hljs {
+    background: #191919!important;
+}
+code.inline {
+    border-radius: 9px!important;
+    background-color: #ff0000!important;
+}
+.tab-bar.SIDE .tab-bar-item.selected:before {
+    border-radius: 25px;
+    border: 5px solid;
+    padding: 10px;
+    width: 145px;
+    height: 5px;
+    animation-name: selectedcolors;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes selectedcolors {
+    0% {
+        color: cyan;
+    }
+    25% {
+        color: transparent;
+    }
+    50% {
+        color: cyan;
+    }
+    75% {
+        color: transparent;
+    }
+    100% {
+        color: cyan;
+    }
+}
+.tab-bar.SIDE {
+    padding-left: 10px;
+    background: #111111;
+}
+.language-select .Select-menu::-webkit-scrollbar {
+    background-color: transparent;
+    background-clip: padding-box;
+}
+.language-select .Select-menu::-webkit-scrollbar-thumb {
+    background-color: #00FFFF;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 8px;
+}
+.scroller-wrap .scroller::-webkit-scrollbar-thumb,
+.chat>.content:first-child .scroller-wrap .scroller::-webkit-scrollbar-thumb {
+    background-color: #00FFFF;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 8px;
+}
+.chat>.content:first-child .scroller-wrap .scroller::-webkit-scrollbar-track-piece,
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px #00FFFF;
+    border: 1px solid #00FFFF;
+    background: #181818;
+    border-radius: 10px;
+}
+.chat>.content:first-child .scroller-wrap .scroller::-webkit-scrollbar-track-piece,
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece:hover {
+    background-color: #181818;
+    background-clip: padding-box;
+}
+.theme-dark .channel-textarea-inner textarea {
+    color: rgba(255, 255, 255, .7);
+    background-color: transparent;
+    font-family: 'Dosis', sans-serif;
+}
+.guild-channels .channel a {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: box;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Francois One', sans-serif;
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .25);
+}
+.theme-dark .message-group h2 strong {
+    font-family: 'Josefin Slab', serif;
+}
+.theme-dark .message-group .comment .markup {
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+}
